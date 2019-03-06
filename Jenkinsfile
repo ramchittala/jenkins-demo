@@ -1,11 +1,17 @@
-  node{
-   stage('SCM Checkout'){
+  pipeline {
+    agent any
+ stages
+    {
+    stage('SCM Checkout'){
      git 'https://github.com/ramchittala/jenkins-demo'
-   }
-   stage('Compile-Package'){
+    }
+
+    stage('Compile-Package'){
     
            sh 'mvn package'
-   }
+    }
+    
+  }
    
 }
 
