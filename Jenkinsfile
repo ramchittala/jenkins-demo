@@ -4,8 +4,7 @@
    }
    stage('Compile-Package'){
     
-      def mvnHome =  tool 'M3', type: 'maven'   
-      sh "${mvnHome}/bin/mvn package"
+      sh 'mvn package'
    }
    
 }
